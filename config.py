@@ -1,0 +1,43 @@
+import MetaTrader5 as mt5
+
+DEFAULT_CONFIG = {
+    "symbol": "XAUUSD",
+    "timeframe": "M5",
+    "magic_number": 123456,
+    "slippage": 10,
+    "poll_interval_sec": 15,
+    "log_dir": "logs",
+    "short_window": 10,
+    "long_window": 30,
+    "trend_window": 200,
+    "risk_percent_per_trade": 1.0,
+    "min_lot": 0.01,
+    "max_lot": 1.0,
+    "sl_points": 1000,
+    "tp_points": 1500,
+    "max_positions": 2,
+    "monthly_trade_limit": 100,
+    "trailing_stop_enabled": True,
+    "trailing_stop_distance": 500,
+    "trailing_stop_step": 100,
+    "news_filter_enabled": True,
+    "news_currency": "USD",
+    "news_buffer_minutes": 30,
+    "news_calendar_url": "https://nfs.faireconomy.media/ff_calendar_thisweek.json",
+    "news_local_events_path": "news_events.json",
+    "news_cache_ttl_minutes": 180,
+    "news_fail_open": True,
+    "daily_close_enabled": True,
+    "daily_close_time_server": "23:00",
+    "flatten_minutes_before_close": 60,
+}
+
+TIMEFRAME_MAP = {
+    "M1": mt5.TIMEFRAME_M1,
+    "M5": mt5.TIMEFRAME_M5,
+    "M15": mt5.TIMEFRAME_M15,
+    "M30": mt5.TIMEFRAME_M30,
+    "H1": mt5.TIMEFRAME_H1,
+    "H4": mt5.TIMEFRAME_H4,
+    "D1": mt5.TIMEFRAME_D1,
+}
